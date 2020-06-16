@@ -19,7 +19,8 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
- $plugin->version = 2013010217;  // YYYYMMDDHH (year, month, day, 24-hr time)
+ $plugin->version = 2020061622;  // YYYYMMDDHH (year, month, day, 24-hr time)
  $plugin->requires = 2011070100; 
- $plugin->release = '2.1 (Build: 2011070100)'; 
+ $plugin->release = '3.9 (Build: 20200615)';
+ $plugin->component = 'block_activity_track'; 
  $plugin->maturity = MATURITY_STABLE;
