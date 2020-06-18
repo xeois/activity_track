@@ -9,3 +9,7 @@ This block will help the students to view all the courses they are enrolled to a
 Moodle 2.1 (Build: 2012020118)
 
 Link added to all the courses for easy navigation from the block.
+
+Moodle 3.9 (Build: 20200615)
+
+Installation issue resolved for version 3.9 and minor alignment issues resolved.

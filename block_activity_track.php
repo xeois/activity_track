@@ -150,13 +150,13 @@ class block_activity_track extends block_base
 		 $courses1  = enrol_get_my_courses('', 'visible DESC,sortorder ASC'); //defined in lib/enrollib.php file	
 		
         // Display completion status       
-      	$this->content->text .=  '<table cellpadding="0" cellspacing="0" width="178" border="0">';
+      	$this->content->text .=  '<table cellpadding="0" cellspacing="0" width="100%" border="0">';
 				$this->content->text .= '<tr>'; 
-				$this->content->text .= '<td width="85" align="right"><b>Total</b>';
-				$this->content->text .= '</td><td align="left"><b>Over</b>';
-				$this->content->text .= '</td><td align="left"><b>%</b>';
+				$this->content->text .= '<td width="60%" align="right"><b>Total</b>';
+				$this->content->text .= '</td><td width="20%" align="right"><b>Over</b>';
+				$this->content->text .= '</td><td width="20%" align="right"><b>%age</b>';
 				$this->content->text .= '</td></tr></table>';
-		$this->content->text .=  '<table cellpadding="0" cellspacing="0" width="178" border="0">';
+		$this->content->text .=  '<table cellpadding="0" cellspacing="0" width=100% border="0">';
 		
 		foreach ($courses1 as $course1) 
 		{
@@ -197,15 +197,7 @@ class block_activity_track extends block_base
 				{
 					$this->content->text .=print_error('cannotviewreport');
 				}
-				
-				
-				
-				
-				
-				
-				
-				
-				
+					
 				
 				// Load completion data
 				$info = new completion_info($course);
@@ -273,12 +265,12 @@ LEFT JOIN {course_modules} m ON mc.coursemoduleid=m.id WHERE mc.userid = ? AND m
 				$this->content->text .='</b></td></tr>';
 				
 				
-				$this->content->text .= '<tr><td align="left" width="70" title="Activity completion status">'; 
+				$this->content->text .= '<tr><td align="center" width="50%" title="Activity completion status">'; 
 				//$this->content->text .=$course1->fullname;
 				$this->content->text .=$status;
-				$this->content->text .= '</td><td align="left" width="27" title="Total activities">'. $tot_rec;
-				$this->content->text .= '</td><td width="27" align="left" title="Total Activities completed">'.$tot_comp;
-				$this->content->text .= '</td><td width="26" align="right" title="Activities completed(%)">'.$count.'%';
+				$this->content->text .= '</td><td align="center" width="27" title="Total activities">'. $tot_rec;
+				$this->content->text .= '</td><td width="27" align="center" title="Total Activities completed">'.$tot_comp;
+				$this->content->text .= '</td><td width="20" align="center" title="Activities completed(%)">'.$count.'%';
 				$this->content->text .= '</td></tr>';
 				
 				
